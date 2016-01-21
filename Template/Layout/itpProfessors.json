@@ -1,0 +1,39 @@
+{
+    "name": "ITP",
+    "value": 100,
+    "children": [{
+            "name": "Teachers",
+            "value": "75",
+            "children": [
+                {
+                    "name": "Eric",
+                    "value": 25
+                }, {
+                    "name": "Nancy",
+                    "value": 25
+                }, {
+                    "name": "Shiffman",
+                    "value": 25
+                }
+              ]
+              },
+        {
+            "name": "Rooms",
+            "value": "75",
+            "children": [
+                {
+                    "name": "ConferenceRoom",
+                    "value": 20
+                },
+                {
+                    "name": "Room50",
+                    "value": 20
+                }
+
+                     ]
+
+                 }, {
+            "name": "Admin",
+            "value": 75
+        }]
+}
