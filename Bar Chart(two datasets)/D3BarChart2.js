@@ -13,6 +13,9 @@ var currentData = dataset;
 
 function update() {
 
+    //create the button 
+    document.body.innerHTML="<button type=\"button\">change</button>";
+    
     //create an svg element 
     var mySVG = d3.select("body")
         .append("svg")
