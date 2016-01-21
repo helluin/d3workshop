@@ -22,6 +22,7 @@ console.log(myPack);
 //2.draw the shapes using the generated data
 d3.json("itpProfessors.json", function (data) {
     var nodes = myPack.nodes(data);
+    console.log(data)
     console.log(nodes);
 
     var node = mySVG.selectAll("circle")

@@ -12,8 +12,9 @@ var newDataset = [11, 12, 15, 20, 18, 17, 16, 18, 23, 25,
 var currentData = dataset;
 
 function update() {
-
+    //create a button
     document.body.innerHTML = "<button type=\"button\">Change!</button>";
+    
     //create an svg element 
     var mySVG = d3.select("body")
         .append("svg")
