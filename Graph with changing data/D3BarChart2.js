@@ -6,12 +6,11 @@ var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
        11, 12, 15, 20, 18, 29, 16, 18, 23, 25];
 
 
-var newDataset = [11, 12, 15, 20, 18, 17, 16, 18, 23, 25,
-                    5, 10, 13, 19, 21, 25, 22, 18, 15, 13];
 
-var currentData = dataset;
 
-function update() {
+function update(data) {
+    //clear the page
+    document.body.innerHTML = "";
 
     //create an svg element 
     var mySVG = d3.select("body")
@@ -19,9 +18,10 @@ function update() {
         .attr("width", w)
         .attr("height", h);
 
+
     //draw stuff with svg 
-    var myBars = mySVG.selectAll("rect")
-        .data(currentData)
+    mySVG.selectAll("rect")
+        .data(data)
         .enter()
         .append("rect")
         .attr("x", function (d, i) {
@@ -32,6 +32,7 @@ function update() {
         })
         .attr("width", 5)
         .attr("height", function (d) {
+            console.log("yes");
             return d * 10;
 
         })
@@ -47,8 +48,8 @@ function update() {
                 .duration(500)
                 .attr("fill-opacity", 0);
 
-        })
- 
+        });
+
 
 
     var myText = mySVG.selectAll("text")
@@ -76,17 +77,20 @@ function update() {
             return "text" + i;
 
         })
-    ;
+        .attr("class", "oldData")
 
+    ;
+    console.log("drawn!");
 
 }
 
-update();
+//INITIAL DRAWING
+update(dataset);
 
-d3.select("button")
-    .on("click", function () {
-        console.log("clicked");
-        currentData = newDataset;
-        update();
-
-    });
+//MAKE DATA CHANGE 
+setInterval(function () {
+    dataset.push(10);
+    dataset.splice(0, 1);
+    console.log(dataset);
+    update(dataset);
+}, 1000);

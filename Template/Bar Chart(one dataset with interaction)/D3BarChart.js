@@ -1,20 +1,19 @@
-var w=500;
-var h=600; 
+var w = 500;
+h = 600;
+
 
 var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
        11, 12, 15, 20, 18, 29, 16, 18, 23, 25];
 
-
-//var newDataset = [11, 12, 15, 20, 18, 17, 16, 18, 23, 25,
-//                    5, 10, 13, 19, 21, 25, 22, 18, 15, 13];
-
-
-//create an svg element 
+var mySVG = d3.select("body")
+    .append("svg")
+    .attr("width", w)
+    .attr("height", h);
 
 
-//draw stuff with svg 
 
 
-//draw the lables
+    //create an svg element 
 
 
+    //draw stuff with svg 
