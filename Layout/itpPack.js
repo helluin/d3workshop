@@ -31,9 +31,17 @@ d3.json("itpProfessors.json", function (data) {
         .attr("r", function (d) {
             return d.r;
         })
-        .attr("transform", function (d) {
-            return "translate(" + d.x + "," + d.y + ")";
+        .attr("x", function (d) {
+            console.log(d.x);
+            return d.x;
+            
         })
+        .attr("y", function (d) {
+            return d.y;
+        })
+        //        .attr("transform", function (d) {
+        //            return "translate(" + d.x + "," + d.y + ")";
+        //        })
         .attr("fill", "steelblue")
         .attr("opacity", 0.25)
         .attr("stroke", "#ADADAD").attr("stroke-width", "2");
